@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+body {
+  background-color: #121212;
+  color: #b3b3b3;
+  font-family: "Arial", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select {
+  margin-top: 20px;
+  background-color: #282828;
+  color: #b3b3b3;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+
+  /* Add custom dropdown arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23b3b3b3" viewBox="0 0 140 140" width="50" height="50" xmlns="http://www.w3.org/2000/svg"><path d="M20 40h100l-50 60z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px; /* Add padding to avoid text overlap with arrow */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+option {
+  background-color: #282828;
+  color: #b3b3b3;
+}
+
+option:hover {
+  background-color: #1db954;
+}
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   color: white;
+  background-color: #007bff;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #0056b3;
 }
