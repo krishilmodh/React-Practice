@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import ThemeContext from "./ThemeProvider";
 
 export default function Dropdown() {
   const countries = [
@@ -7,9 +8,10 @@ export default function Dropdown() {
     { name: "UK", code: "UK", cities: ["London", "Manchester", "Liverpool"] },
   ];
   const [selectedCountry, setSelectedCountry] = useState("");
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="dropdown-container">
+    <div className="dropdown-container" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
       <div>Dropdown</div>
       <select
         onChange={(e) => {
